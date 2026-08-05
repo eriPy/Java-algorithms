@@ -1,5 +1,3 @@
-package Arrays;
-
 /*
 Two Sum problem
 Given an array of integers nums and an integer target, return the indices of the two numbers that 

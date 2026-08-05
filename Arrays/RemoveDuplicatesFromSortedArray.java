@@ -1,5 +1,3 @@
-package Arrays;
-
 /*
 Remove Duplicates From Sorted Array problem
 Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place so each unique element appears 
