@@ -13,7 +13,7 @@ Time Complexity: O(n^2)
 Space Complexity: O(n^2)
 */
 
-class PascalTriangule {
+class PascalTrianguleII {
     public List<Integer> generate(int rowIndex) {
         List<List<Integer>> triangule = new ArrayList<>();
         int actual = 1;
