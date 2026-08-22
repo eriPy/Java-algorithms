@@ -1,6 +1,7 @@
 /*
 Sqrt(x) problem
-Given a non-negative integer x, return the square root of x rounded down to the nearest integer, without using any built-in exponent or power function/operator.
+Given a non-negative integer x, return the square root of x rounded down to the nearest integer, without 
+using any built-in exponent or power function/operator.
 Difficulty: Easy
 Time Complexity O(sqrt(n))
 Space Complexity O(1)
