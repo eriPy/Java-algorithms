@@ -15,15 +15,18 @@ Space Complexity: O(1)
 
 public class IntegerToRoman {
     public String intToRoman(int num) {
-        String roman = ""; int carry = 0;
+        StringBuilder roman = new StringBuilder(); int n = 0;
         int[] posibilities = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
         String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
         while (num > 0) {
-            if (num >= posibilities[carry]) {
-                roman = roman + symbols[carry]; num -= posibilities[carry]; carry = 0; continue;
+            if (num >= posibilities[n]) {
+                int value = num / posibilities[n];
+                roman.append(symbols[n].repeat(value));
+                num -= (value * posibilities[n]);
+                continue;
             }
-            carry++;
+            n++;
         }
-        return roman;
+        return roman.toString();
     }
 }
