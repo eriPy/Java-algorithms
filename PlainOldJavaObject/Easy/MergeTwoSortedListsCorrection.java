@@ -17,16 +17,12 @@ public class MergeTwoSortedListsCorrection {
                 tail.next = (list1 == null) ? list2: list1;
                 tail = tail.next;
                 if (list1 != null) {list1 = list1.next;} else {list2 = list2.next;}
-                continue;
+            } else {
+                int value = (list1.val <= list2.val) ? list1.val: list2.val;
+                tail.next = (value == list1.val) ? list1: list2;
+                tail = tail.next;
+                if (value == list1.val) {list1 = list1.next;} else {list2 = list2.next;}
             }
-            int value = (list1.val <= list2.val) ? list1.val: list2.val;
-            tail.next = (value == list1.val) ? list1: list2;
-            tail = tail.next;
-            if (value == list1.val) {
-                list1 = list1.next;
-                continue;
-            }
-            list2 = list2.next;
         }
         return dummy.next;
     }
